@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+:root {
+  --main-color: #222;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+body {
+  font-family: "Press Start 2P", sans-serif;
+  background-color: var(--main-color);
+}
+
+header .head {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+header .head .again {
+  background-color: white;
+  color: var(--main-color);
+  border: none;
+  padding: 20px 30px;
+  font-size: clamp(0.1rem, 2.5vw, 1.3rem);
+  cursor: pointer;
+}
+
+header .head span {
+  color: white;
+  font-size: clamp(0.1rem, 2.1vw, 0.9rem);
+  display: block;
+}
+
+@media (max-width: 768px) {
+  header .head {
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  header .head .again {
+    padding: 15px 20px;
+  }
+}
+
+header .content {
+  text-align: center;
+}
+
+header .content h1 {
+  color: white;
+  font-size: clamp(1rem, 10vw, 2.5rem);
+  line-height: 1.5;
+  display: block;
+}
+
+header .content .number {
+  color: var(--main-color);
+  background-color: white;
+  padding: 25px 15px;
+  display: inline-block;
+  font-size: 3.8rem;
+  text-align: center;
+  margin-top: 20px;
+  width: 180px;
+}
+
+header .content > div {
+  position: relative;
+}
+
+header .content > div ::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 8px;
+  width: 100%;
+  z-index: -1;
+  left: 50%;
+  top: calc(50% + 10px);
+  transform: translate(-50%, -50%);
+}
+
+section {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+section .left input {
+  padding: 30px;
+  max-width: 200px;
+  height: 100px;
+  background: none;
+  border: 3px solid white;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  display: block;
+}
+
+section .left button {
+  background-color: white;
+  color: var(--main-color);
+  border: none;
+  padding: 20px 30px;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  margin-top: 20px;
+  margin: 40px auto 0 auto;
+  display: block;
+  cursor: pointer;
+}
+
+section .right > span {
+  display: block;
+  color: white;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  margin-top: 10px;
+}
+
+section .right span:first-of-type {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  section .left input {
+    margin: 40px auto 0 auto;
+  }
+  section .right span:first-of-type {
+    margin-bottom: 20px;
+  }
+}
